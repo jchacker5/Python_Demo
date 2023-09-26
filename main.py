@@ -1,4 +1,5 @@
-from record_class import NameRecord #this is how to import a class from a file  
+from record_class import NameRecord #this is how to import a class from a file 
+from useful_functions import * #this is how to import a file 
 # #this is the second comment
 
 
@@ -41,7 +42,11 @@ from record_class import NameRecord #this is how to import a class from a file
 # print(list_element)
 
 # list_element = python_list[4][1]  #this is how to get the last element of a list within a list
-
+with open("sample_names.txt") as file_object: #this is how to open a file
+    for line in file_object:
+        print(line, end='') #this is how to read a line from a file and remove the line feed
+# the with statement will close the file for you helping to prevent memory leaks        
+#this is how to open a file the old way       
 file_object = open("sample_names.txt") #this is how to open a file
 # print(type(file_object))
 
@@ -79,5 +84,9 @@ for line in file_object: #this is how to read all the lines in a file
     # main_name_list.append(name_dict) #this is how to add an dicelement to a list
     print(main_name_list) #this is how to print a list
     
-    for dict_obj in main_name_list:
-        print(f"{dict_obj['first_name']} {dict_obj['last_name']}")
+    
+for dict_obj in main_name_list:
+    print(f"{dict_obj['first_name']} {dict_obj['last_name']}")
+        
+
+print_1_to_10() #this is how to call a function in python

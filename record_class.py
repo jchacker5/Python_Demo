@@ -5,7 +5,8 @@ version: 1.0
 copyright 2023
 """
 
-class NameRecord:
+
+class NameRecord: #this is how to create a class in pascal case
     """ 
     this is the NameRecord class definition
     """
